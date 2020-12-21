@@ -25,7 +25,7 @@ while 1
     try
         im = imread(sprintf(im_path_tmpl, i));
         imh = size(im,1); imw = size(im,2);
-        i = i + 1;
+        
     catch
         break;
     end
@@ -146,6 +146,7 @@ while 1
 %     imshow(adi_image);
 %     waitforbuttonpress;    
     imwrite(adi_image, sprintf(out_adi_path_tmpl,i));
+    i = i + 1;
 end
 end
 
